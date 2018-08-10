@@ -43,6 +43,7 @@ body {
 #evaluation-area{
     background:white;
     text-align:center;
+    font-weight:bold;
     padding-top:120px;
     padding-bottom:120px;
     font-size:24px;
