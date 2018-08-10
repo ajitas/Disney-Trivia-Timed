@@ -60,6 +60,7 @@ function showNextQuestion(){
     //clear the time div and show the new time
     $("#time-remaining > p").remove();
     $("#time-remaining").append("<p>" + timeConvert(currentTime)+"</p>");
+    $("#time-remaining").css("color","black");
 
     //start running the timer
     updateTime = setInterval(decrementTime,1000);
@@ -201,6 +202,10 @@ function decrementTime(){
     //add the new time to the time-remaining div
     $("#time-remaining").append("<p>" + timeConvert(currentTime)+"</p>");
 
+    if(currentTime <= 5)
+    {
+        $("#time-remaining").css("color","red");
+    }
     //if time becomes 0, your time is up and the result of the current question is shown
     if(currentTime === 0){
         showResult();

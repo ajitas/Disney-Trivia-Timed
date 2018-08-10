@@ -13,9 +13,13 @@ body {
     text-shadow: 3px 3px 4px rgb(23, 183, 204);
 }
 
+.btn {
+    font-size:24px;
+    font-weight:bold;
+}
+
 #start-game {
     margin-top:10%;
-    font-size:20px;
     background-color: turquoise;
 }
 
