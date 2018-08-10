@@ -23,7 +23,7 @@ var quiz = [
     answer:"California"},
     {question:"Which is the hottest state in US?",
     options:["Florida","Texas","Arizona","Georgia"],
-    answer:"Florida"},
+    answer:"Florida"}
     
 ];
 
