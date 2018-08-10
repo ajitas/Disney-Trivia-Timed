@@ -1,5 +1,5 @@
 body {
-    
+    background-image: url(../images/background.jpg);
 }
 
 .container {
@@ -9,7 +9,7 @@ body {
     font-size:50px;
     color:white;
     padding:30px 30px 5px 30px;
-    text-shadow: 3px 3px 4px rgb(23, 183, 204)
+    text-shadow: 3px 3px 4px rgb(23, 183, 204);
 }
 
 #start-game {
@@ -20,30 +20,32 @@ body {
 
 #question-area {
     background:white;
-    border: 1px black solid;
+    box-shadow: 5px 5px 20px  turquoise;
     text-align:center;
-    padding-top:10px;
+    padding:20px;
+    margin-top:20px;
+
 }
 
 #time-remaining {
     font-size: 24px;
     font-weight:bold;
-    background:turquoise;
-    border: 1px black solid;
+    background:white;
     text-align:center;
     margin-bottom:5px;
-    padding-top:5px;
+    padding-top:10px;
+    box-shadow: 5px 5px 20px  turquoise;
 
 }
 
 
 #evaluation-area{
     background:white;
-    border: 1px black solid;
     text-align:center;
     padding-top:120px;
     padding-bottom:120px;
     font-size:24px;
+    box-shadow: 5px 5px 20px  turquoise;
 }
 
 label {
@@ -52,11 +54,11 @@ label {
 
 .options {
     padding:5px;
-    margin-left:40%;
-    margin-right:40%;
-    margin-top:5px;
-    margin-bottom: 5px;
-    border:1px black solid;
+    margin-left:20%;
+    margin-right:20%;
+    margin-top:10px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 5px  turquoise;
 }
 
 #result {
@@ -65,12 +67,12 @@ label {
 }
 
 .options:hover , .options:focus{
-    background:cyan;
+    background: turquoise;
     cursor:pointer;
 }
 
 #restart-game {
-    margin-top:5px;
+    margin-top:15px;
     font-size:20px;
     background-color: turquoise;
 }

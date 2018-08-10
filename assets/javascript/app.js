@@ -1,34 +1,34 @@
 //data structure to store the information about the questions
 var quiz = [
-    {question:"Who was the demigod in Moana?",
-    options:["Kauai","Maui","Lanai","Muni"],
-    answer:"Maui"},
-    {question:"what is 20-10?",
-    options:[4,6,8,10],
-    answer:"10"},
-    {question:"what is 2*7?",
-    options:[4,14,8,9],
-    answer:"14"},
-    {question:"what is 6*6?",
-    options:[4,6,36,9],
-    answer:"36"},
-    {question:"what is 2+2?",
-    options:[4,6,8,9],
-    answer:"4"},
-    {question:"what is 20-10?",
-    options:[4,6,8,10],
-    answer:"10"},
-    {question:"what is 2*7?",
-    options:[4,14,8,9],
-    answer:"14"},
-    {question:"what is 6*6?",
-    options:[4,6,36,9],
-    answer:"36"},
+    {question:"Which is the deepest lake in US?",
+    options:["Lake Michigan","Crater Lake","Lake Tahoe","Lake Clark"],
+    answer:"Crater Lake"},
+    {question:"Which is the largest state in US?",
+    options:["Alaska","California","New Mexico","Arizona"],
+    answer:"Alaska"},
+    {question:"Who was the third president of US?",
+    options:["Andrew Jackson","James Monroe","Thomas Jefferson","George Washington"],
+    answer:"Thomas Jefferson"},
+    {question:"Which is the least populated state in US?",
+    options:["Rhode Island","Delaware","North Dakota","Wyoming"],
+    answer:"Wyoming"},
+    {question:"Which is the largest art meuseum in US?",
+    options:["National Gallery of Art","Minneapolis Institute of Art","Metropolitan Museum of Art","San Francisco Museum of Modern Art"],
+    answer:"Metropolitan Museum of Art"},
+    {question:"Which is the largest baseball stadium in US?",
+    options:["Coors Field, Denver","Safeco Field, Seattle","AT&T Park, SF","Dodger Stadium, LA"],
+    answer:"Dodger Stadium,LA"},
+    {question:"Which is the most populated state in US?",
+    options:["Florida","California","New York","Texas"],
+    answer:"California"},
+    {question:"Which is the hottest state in US?",
+    options:["Florida","Texas","Arizona","Georgia"],
+    answer:"Florida"},
     
 ];
 
 //global counters
-var currentTime =10;
+var currentTime =20;
 var updateTime;
 var correct = 0;
 var incorrect = 0;
@@ -52,7 +52,7 @@ function resetGame(){
 function showNextQuestion(){
 
     //reset timer for the next question
-    currentTime = 10;
+    currentTime = 20;
 
     //clear the previous interval
     clearInterval(updateTime);
@@ -148,13 +148,13 @@ function showResult(currentUserAnswer){
     currentQuestion++;
     //if this is the last question
     if(currentQuestion === quiz.length){
-        //show final evaluation after waiting for 1 second
-        setTimeout(showFinalEvaluation,1000);
+        //show final evaluation after waiting for 2 second
+        setTimeout(showFinalEvaluation,2000);
     }
     //if it is not the last question
     else{
-        //show next question after 1 second
-        setTimeout(showNextQuestion,1000);
+        //show next question after 2 second
+        setTimeout(showNextQuestion,2000);
     }
 }
 
@@ -242,7 +242,7 @@ $("#start-game").on("click",function(){
 //when user clicks restart game div
 $("#restart-game").on("click", function(){
     //resets all the counters
-    currentTime =10;
+    currentTime =20;
     updateTime;
     correct = 0;
     incorrect = 0;
