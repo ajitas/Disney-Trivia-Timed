@@ -23,7 +23,8 @@ var quiz = [
     answer:"14"},
     {question:"what is 6*6?",
     options:[4,6,36,9],
-    answer:"36"}
+    answer:"36"},
+    
 ];
 
 //global counters

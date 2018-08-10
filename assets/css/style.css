@@ -1,5 +1,5 @@
 body {
-    background-image:url("../images/724511.jpg");
+    
 }
 
 .container {
@@ -28,11 +28,12 @@ body {
 #time-remaining {
     font-size: 24px;
     font-weight:bold;
-    background:white;
+    background:turquoise;
     border: 1px black solid;
     text-align:center;
     margin-bottom:5px;
     padding-top:5px;
+
 }
 
 
