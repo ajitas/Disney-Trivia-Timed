@@ -53,10 +53,12 @@ Learning jQuery: Click event handlers, setTimeOut, setInterval, dymanically crea
 var quiz = [
     {question:"Which is the deepest lake in US?",
     options:["Lake Michigan","Crater Lake","Lake Tahoe","Lake Clark"],
-    answer:"Crater Lake"},
+    answer:"Crater Lake",
+    url:"https://upload.wikimedia.org/wikipedia/commons/5/5b/Wizard_Island%2C_Crater_Lake_01.jpg"},
     {question:"Which is the largest state in US?",
     options:["Alaska","California","New Mexico","Arizona"],
-    answer:"Alaska"},
+    answer:"Alaska",
+    url:"https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Alaska.svg"}
 ];
 
 //shows the next question when the user answers current one or time is up
@@ -149,6 +151,12 @@ function showResult(currentUserAnswer){
         resultDiv.append("<p>Oops!!</p>");
         resultDiv.append("<p>"+ "The correct answer was: " +quiz[currentQuestion]["answer"]+  "</p>");
     }
+    var newImage = $("<img>");
+    newImage.attr("src",quiz[currentQuestion]["url"]);
+    newImage.css("height","200px");
+    newImage.css("width","200px");
+    resultDiv.append(newImage);
+    
     //append the new resultDiv to the result div
     $("#result").append(resultDiv);
 

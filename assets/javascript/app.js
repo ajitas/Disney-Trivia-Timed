@@ -2,28 +2,36 @@
 var quiz = [
     {question:"Which is the deepest lake in US?",
     options:["Lake Michigan","Crater Lake","Lake Tahoe","Lake Clark"],
-    answer:"Crater Lake"},
+    answer:"Crater Lake",
+    url:"https://upload.wikimedia.org/wikipedia/commons/5/5b/Wizard_Island%2C_Crater_Lake_01.jpg"},
     {question:"Which is the largest state in US?",
     options:["Alaska","California","New Mexico","Arizona"],
-    answer:"Alaska"},
+    answer:"Alaska",
+    url:"https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Alaska.svg"},
     {question:"Who was the third president of US?",
     options:["Andrew Jackson","James Monroe","Thomas Jefferson","George Washington"],
-    answer:"Thomas Jefferson"},
+    answer:"Thomas Jefferson",
+    url:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg/800px-Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg"},
     {question:"Which is the least populated state in US?",
     options:["Rhode Island","Delaware","North Dakota","Wyoming"],
-    answer:"Wyoming"},
+    answer:"Wyoming",
+    url:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Wyoming.svg/1000px-Flag_of_Wyoming.svg.png"},
     {question:"Which is the largest art meuseum in US?",
     options:["National Gallery of Art","Minneapolis Institute of Art","Metropolitan Museum of Art","San Francisco Museum of Modern Art"],
-    answer:"Metropolitan Museum of Art"},
+    answer:"Metropolitan Museum of Art",
+    url:"https://media.architecturaldigest.com/photos/5a4e7d816d2c3f0f3ec6d475/master/pass/met%20museum.jpg"},
     {question:"Which is the largest baseball stadium in US?",
     options:["Coors Field, Denver","Safeco Field, Seattle","AT&T Park, SF","Dodger Stadium, LA"],
-    answer:"Dodger Stadium,LA"},
+    answer:"Dodger Stadium, LA",
+    url:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Dodger_Stadium_field_from_upper_deck_2015-10-04.jpg/1024px-Dodger_Stadium_field_from_upper_deck_2015-10-04.jpg"},
     {question:"Which is the most populated state in US?",
     options:["Florida","California","New York","Texas"],
-    answer:"California"},
+    answer:"California",
+    url:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/900px-Flag_of_California.svg.png"},
     {question:"Which is the hottest state in US?",
     options:["Florida","Texas","Arizona","Georgia"],
-    answer:"Florida"}
+    answer:"Florida",
+    url:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Florida.svg/750px-Flag_of_Florida.svg.png"}
     
 ];
 
@@ -138,6 +146,12 @@ function showResult(currentUserAnswer){
         resultDiv.append("<p>Oops!!</p>");
         resultDiv.append("<p>"+ "The correct answer was: " +quiz[currentQuestion]["answer"]+  "</p>");
     }
+    var newImage = $("<img>");
+    newImage.attr("src",quiz[currentQuestion]["url"]);
+    newImage.css("height","200px");
+    newImage.css("width","200px");
+    resultDiv.append(newImage);
+
     //append the new resultDiv to the result div
     $("#result").append(resultDiv);
 
